@@ -13,6 +13,7 @@ gem "sqlite3"
 gem "uglifier"
 gem "httparty"
 gem "webmock"
+gem "fast_jsonapi"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
