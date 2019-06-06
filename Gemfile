@@ -15,6 +15,7 @@ gem "httparty"
 gem "webmock"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
+gem "active_model_serializers"
 
 group :development do
   gem "better_errors"
