@@ -26,4 +26,6 @@ Rails.application.routes.draw do
       resources :movies, only: [:index, :show]
     end
   end
+
+  resources :top_commentators, only: [:index]
 end

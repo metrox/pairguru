@@ -1,0 +1,15 @@
+%table.table.table-striped
+  %tbody
+    - commentators.each_with_index do |commentator, i|
+      %tr{ class: "top_commentator" }
+        %td= i + 1
+        %td
+          .row
+            .col-md-4
+              %strong
+                = commentator.first.email
+            .col-md-8
+              %div{style: "float: right" }
+                comments:
+                %strong
+                  = commentator.last
