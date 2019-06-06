@@ -1,0 +1,11 @@
+%div{class: "comment" }
+  %p
+    %strong Commenter:
+    = comment.commenter
+  %p
+    %strong Comment:
+    = comment.body
+    %p= link_to "Destroy Comment",
+        [comment.movie, comment],
+        method: :delete,
+        data: { confirm: "Are you sure?" }

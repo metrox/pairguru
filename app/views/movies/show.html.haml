@@ -11,3 +11,21 @@
       %p= @movie.description
 - if user_signed_in?
   %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+%h2 Comments
+= render @movie.comments
+
+- if user_signed_in?
+  %h2 Add a comment:
+  = form_with(model: [@movie, @movie.comments.build ], local: true) do |form|
+    - if flash[:errors].present?
+      %div
+        - flash[:errors].each do |err|
+          %li
+            = err
+    %p
+      = form.label :body
+      = form.text_area :body
+    %p
+      = form.submit
+- else
+  %h2 Please login in order to leave a comment
